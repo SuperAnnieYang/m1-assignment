@@ -1,0 +1,112 @@
+header{
+    height: 500px;
+    font-size: xx-large;
+    color: rgb(255, 153, 0);
+    background-position: 0 -200px;
+}
+#home header{
+    background:url(images/Dog.JPG);
+    background-size: 1200px;
+}
+#adopt header{
+    background:url(images/Dog.JPG);
+    background-size: 1200px;
+}
+#contact header{
+    background:url(images/Dog.JPG);
+    background-size: 1200px;
+}
+nav{
+    background-color: #eebf68;
+    height: 50px;
+    padding-top: 1px;
+    text-align: center;
+}
+.main-menu ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding:0 50px;
+    text-transform: uppercase;
+    border-right:2px solid #345688;
+    
+}
+li:first-child{
+    border-left: 2px solid #345688;
+}
+
+.main-menu ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+    
+}
+.main-menu ul li a:link{
+    color:rgb(38, 84, 170);
+}
+.main-menu ul li a:visited{
+    color: #345688;;
+}
+.main-menu ul li a:hover{
+    color:white;
+    
+}
+
+.main-menu ul li a:active{
+    color: salmon;
+}
+
+main{
+    height: 900px;
+}
+main h2,main p{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top:50px;
+    color:#345688;
+}
+footer{
+    background:#eebf68;
+    height: 100px;
+}
+/*home*/
+
+img{
+    margin:50px auto 50px auto;
+    display: block;
+}
+
+/*adopt*/
+
+table{
+    width:800px;
+    margin: 50px auto 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+caption{
+    background: rgb(150, 105, 156);
+    height:40px;
+    color: white;
+    padding-top:15px;
+    font-weight: bold;
+    font-size: larger;
+}
+thead{
+    background: rgb(187, 150, 192);
+    
+}
+tbody{
+    background: rgb(212, 195, 214);
+    text-align: center;
+}
+tr td:first-child{
+    background: rgb(187, 150, 192);
+}
+th,td{
+    width:350px;
+    height:50px;
+}
+table,caption,th,td{
+    border:1px solid rgb(216, 186, 13);
+}
+
+/*form*/
+
