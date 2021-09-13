@@ -1,80 +1,110 @@
 header{
-    height: 500px;
+    width: 100%;
+    height: 400px;
+    background-repeat: none;
+    text-align: center;
+    padding-top: 100px;
     font-size: xx-large;
-    color: rgb(255, 153, 0);
-    background-position: 0 -200px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
 }
 #home header{
-    background:url(images/Dog.JPG);
-    background-size: 1200px;
+    background:url(images/lovely\ dogs.jpeg);
+    background-size: 1500px;
+    background-position: 0 -100px;
 }
 #adopt header{
-    background:url(images/Dog.JPG);
-    background-size: 1200px;
+    background: url(images/lovely\ dogs2.jpeg);
+    background-size: 1500px;
+    background-position: 0 -200px;
+    
 }
 #contact header{
-    background:url(images/Dog.JPG);
-    background-size: 1200px;
+    background: url(images/lovely\ dogs3.jpeg);
+    background-size: 1500px;
+    background-position: 0 -100px;
+}
+header nav{
+    width: 100%;
+    height: 100px;
 }
 nav{
-    background-color: #eebf68;
-    height: 50px;
-    padding-top: 1px;
     text-align: center;
+    background-color: rgb(178, 211, 240);
+    height: 55px;
+    padding-top:5px;
 }
-.main-menu ul li{
+li{
     list-style-type: none;
     display: inline-block;
-    padding:0 50px;
-    text-transform: uppercase;
-    border-right:2px solid #345688;
-    
-}
-li:first-child{
-    border-left: 2px solid #345688;
-}
-
-.main-menu ul li a{
-    text-decoration: none;
+    padding:0 70px;
+    padding-bottom: 15px;;
+    border-left: 1px solid rgb(150, 145, 145);
+    line-height: 20px;
+    font-size: 20px;
     font-weight: bold;
-    font-size: large;
+    height: 10px;
+    text-transform: uppercase
     
 }
-.main-menu ul li a:link{
-    color:rgb(38, 84, 170);
+li a{
+    text-decoration: none;
+    color:rgba(148, 75, 3, 0.973);
 }
-.main-menu ul li a:visited{
-    color: #345688;;
+li a:hover{
+    color: dodgerblue;
 }
-.main-menu ul li a:hover{
-    color:white;
-    
+li.active{
+    background-color: rgb(97, 97, 97,0.2) ;
 }
-
-.main-menu ul li a:active{
-    color: salmon;
+li.active a{
+    color: dodgerblue;
 }
 
 main{
-    height: 900px;
-}
-main h2,main p{
+    margin-top: 20px;
+    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
-    margin-top:50px;
-    color:#345688;
 }
+
+main .picture{
+    text-align:center;
+}
+
+
+main h2{
+    color: dodgerblue;
+}
+
+
+
 footer{
-    background:#eebf68;
-    height: 100px;
-}
-/*home*/
-
-img{
-    margin:50px auto 50px auto;
-    display: block;
+    background-color: rgb(178, 211, 240);
+    margin-top: 100px;
+    width: 100%;
+    height:155px;
+    padding-bottom: 1em;
+    
 }
 
-/*adopt*/
+footer #lastpart .copyright{
+    padding:3.5em 3.5em 3.5em 13em;
+    float: left;
+    font-size: 0.9em;
+}
+footer #lastpart .media{
+    padding:2.5em;
+    margin-right: 20px;
+    float:right;
+}
+footer #lastpart2{
+    clear:both
+}
+footer #lastpart2 p{
+    font-size:0.85;
+    text-align: center;
+}
 
 table{
     width:800px;
@@ -108,5 +138,75 @@ table,caption,th,td{
     border:1px solid rgb(216, 186, 13);
 }
 
-/*form*/
+form{
+    margin-top: 10px;
+    margin-left:407px;
+    width:43%;
+}
+legend{
+    text-transform: uppercase;
+    color: dodgerblue;
+    font-weight: bold;
+}
+fieldset{
+    border:4px solid dodgerblue;
+    height: 500px;
+}
+label{
+    font-weight: bold;
+    font-size: 15px;
+    margin-left:25px;
+}
 
+input{
+    display: block;
+}
+.textbox label{
+    display:block;
+    margin-top: 10px;
+}
+.radios{
+    margin-top: 15px;
+}
+.radios label {
+    display: inline;
+}
+.selectmenu{
+    margin-top: 15px;
+}
+
+.selectmenu label{
+    display:inline;
+}
+input{
+    margin-left: 25px; 
+}
+
+.textbox input{
+    width:390px;
+}
+.commentbox label{
+    display: block;
+    margin-top: 15px;
+}
+textarea{
+    width:400px;
+    height: 180px;
+    margin-left: 25px;
+    
+}
+
+input[type="submit"]{
+    width:120px;
+    height:40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 310px;
+    background-color: #4977D1;
+    color:white;
+    font-weight: bold;
+    font-size: medium;
+}
+input[type="radio"]{
+    display:inline
+}
