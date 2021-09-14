@@ -140,7 +140,7 @@ table,caption,th,td{
 
 form{
     margin-top: 10px;
-    margin-left:407px;
+    margin-left:410px;
     width:43%;
 }
 legend{
@@ -202,7 +202,7 @@ input[type="submit"]{
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 310px;
-    background-color: #4977D1;
+    background-color: rgba(148, 75, 3, 0.705);
     color:white;
     font-weight: bold;
     font-size: medium;
