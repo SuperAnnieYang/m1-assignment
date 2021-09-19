@@ -143,7 +143,28 @@
 </footer> 
 </div>  
 
+<script>
 
+var fileNames = [];
+var photos =[];
+var image;
+var imageList = [];
+var openList="<li class='photo'>";
+var closeList="</li>";
+var captionList= ["Flash","Apple","Aspen","Seven","Hannah","Hank","Echo","Lily","Hachi","Brownie"];
+var openCaption = "<caption>";
+var closeCaption = "</caption>";
+var openDescTag = "<div class = 'desc'>";
+var closeDescTag = "</div>";
+var descList = ["Hi, I am a 3 yr Husky. I am a boy!","Hi, I Apple! I am 3 yr and I love apples!","Hi, I am Aspen. I am 5!","Hi, I am Seven, and I am only 7 month old","I am Hannah, I am nine already.","Hi I am Hank. I love playing games and I am 4 yr.","Hi, I am Echo! I am just 4 month old!","Hi, I am Lily. I am 2 yr.","Hi, I am Hachi. I love sushi! ","Hi, I am Brownie. I am 6 yr and my favorite food is carrot!"];
+
+for(var i=0;i<10;i++){
+    fileNames.push("dog"+(i+1));
+    photos.push("<img src='images/ourdogs/" + fileNames[i] + ".png'>");
+    image= openList + photos[i] + openCaption + captionList[i] + openDescTag + descList[i] + closeDescTag + closeCaption + closeList;
+    imageList.push(image);
+}
+document.getElementById("album").innerHTML=imageList.join('');
 
 </script>
 </body>
