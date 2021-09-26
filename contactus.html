@@ -87,14 +87,22 @@
     
         <div class="selectmenu">
             <label>What tpye of animal are you interested in</label>  
-            <select>
-                <option>Dogs</option>
-                <option>Cats</option>
-                <option>Rabbits</option>
-                <option>Birds</option>
+            <select id="selector" >
+                <option>Select</option>
+                <option value="dog1">Dogs</option>
+                <option value="cat1">Cats</option>
             </select>
         </div>
-        
+        <!--Popup box-->
+        <br><div id="dogbox" style="display: none;">
+            <label for="dog1">Please enter your dog preference:</label> 
+            <input type="text" name="dog1" id="dog1">
+        </div>
+        <div id="catbox" style="display: none;">
+            <label for="cat1">Please enter your cat preference:</label> 
+            <input type="text" name="cat1" id="cat1">
+        </div>
+        <!---->
         <div class="commentbox">
             <label>We appreciate your valuable feedbacks:</label>  
             <textarea></textarea>
@@ -123,6 +131,25 @@
         <p>This website is designed and created solely for Adoption purposes only at Furbarks Animal Adoption. All contents are not intended for any commercial gain or use.</p>
     </div>
 </footer> 
-</div>  
+</div> 
+
+
+<script>
+var selectme = document.getElementById("selector");
+selectme.addEventListener("change", function(){
+    if(selectme.value == "dog1"){
+        document.getElementById("dogbox").style.display = 'block';
+    }else{
+        document.getElementById("dogbox").style.display = 'none';
+    }
+    if(selectme.value == "cat1"){
+        document.getElementById("catbox").style.display = 'block';
+    }else{
+        document.getElementById("catbox").style.display = 'none';
+    }
+});
+
+
+</script>
 </body>
 </html>

@@ -232,15 +232,20 @@ input{
 .textbox input{
     width:390px;
 }
+input#dog1{
+    width:390px;
+}
+input#cat1{
+    width:390px;
+}
 .commentbox label{
     display: block;
     margin-top: 15px;
 }
 textarea{
     width:400px;
-    height: 180px;
-    margin-left: 25px;
-    
+    height: 120px;
+    margin-left: 25px;  
 }
 
 input[type="submit"]{

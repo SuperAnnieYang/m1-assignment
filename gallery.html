@@ -28,89 +28,14 @@
             <li><a href="contactus.html">Contact Us</a></li>
             <li class="active"><a href="gallery.html">Gallery</a></li>
         </ul>
-
     </nav>
 </header>
 <main>
     <h2>Included with Adoption</h2>
     <p>All animals adopted with us come with spay/neuter,general veterinary exam, vaccinations appropriate to age, flea treatment and basic de-worming.</p>
    <!--<div class="picture"><img src="images/submit.jpeg" alt="aodopt 2 dogs" width="640" height="300"></div>-->
-
     
- <!-- 
- 
-    <form action="submit" method="post">
-<fieldset>
-    <legend>Adopt me Today!</legend>
-    <label>Enter your full name</label>
-    <input type="text" name="name">
-    <label>Enter your email</label>
-    <input type="text" name="email">
-    <label>Enter your phone</label>
-    <input type="text" name="phone">
-    <label>How shoud we contact you </label>
-    <input type="radio" name="contact" value="email">Email
-    <input type="radio" name="contact" value="phone">Phone
-    <label>What tpye of animal are you interested in</label>
-    <select>
-    <option>Dogs</option>
-    <option>Cats</option>
-    <option>Rabbits</option>
-    <option>Birds</option>
-    </select>
-   
-    <label>We appreciate your valuable feedbacks:</label>
-    </r><textarea rows="3" cols="30"></textarea>
-    <input type="submit" value="submit">
-
-
-</fieldset>
-</form>
--->
-
-
-<!--
-<form action="/contact" method="post">  
-    <fieldset>  
-        <legend>Adopt me Today!</legend>
-        <div class="textbox">
-            <label>Enter your full name</label> 
-            <input type="text" name="name">  
-            <label>Enter your email</label>  
-            <input type="email" name="email"> 
-            <label>Enter your phone</label>
-            <input type="text" name="phone"> 
-        </div>
-        
-        <div class="radios">
-            <label>How shoud we contact you</label>  
-            <input type="radio" name="contact" value="email" checked>Email 
-            <input type="radio" name="contact" value="phone">Phone
-        </div>
-    
-        <div class="selectmenu">
-            <label>What tpye of animal are you interested in</label>  
-            <select>
-                <option>Dogs</option>
-                <option>Cats</option>
-                <option>Rabbits</option>
-                <option>Birds</option>
-            </select>
-        </div>
-        
-        <div class="commentbox">
-            <label>We appreciate your valuable feedbacks:</label>  
-            <textarea></textarea>
-        </div>
-    
-        <div class="button">
-            <input type="submit" value="Inquire">
-        </div> 
-    </fieldset>  
-    </form>
--->
-
-    <ul id="album">
+   <ul id="album">
         <!--
         <li class="photo"><img src="images/ourdogs/dog1.png"></li>
         <li class="photo"><img src="images/ourdogs/dog2.png"></li>
@@ -124,7 +49,16 @@
         <li class="photo"><img src="images/ourdogs/dog10.png"></li> 
         -->
     </ul>
+    <!---------------------INFO-------------------->
+    <div id="infobox" style="visibility: hidden;">
+        <div id="infohead"><h4></h4></div>
+        <div id="infotext"><p></p></div>
+        <a id="infoclose"></a>
+    </div>
+    
 </main>
+
+</div>
 
 <footer>
     <div id="lastpart">
@@ -142,6 +76,8 @@
     </div>
 </footer> 
 </div>  
+
+
 
 <script>
 
@@ -161,11 +97,19 @@ var descList = ["Hi, I am a 3 yr Husky. I am a boy!","Hi, I Apple! I am 3 yr and
 for(var i=0;i<10;i++){
     fileNames.push("dog"+(i+1));
     photos.push("<img src='images/ourdogs/" + fileNames[i] + ".png'>");
-    image= openList + photos[i] + openCaption + captionList[i] + openDescTag + descList[i] + closeDescTag + closeCaption + closeList;
+    image = openList + photos[i] + openCaption + captionList[i] + openDescTag + descList[i] + closeDescTag + closeCaption + closeList;
     imageList.push(image);
 }
 document.getElementById("album").innerHTML=imageList.join('');
 
+
+//INFOBOX
+
+
+
 </script>
+
+
+
 </body>
 </html>
