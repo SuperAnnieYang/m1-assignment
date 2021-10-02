@@ -7,7 +7,7 @@
     <title>Your Local Aniaml Adoption</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body id="gallery">
@@ -34,7 +34,8 @@
     <h2>Included with Adoption</h2>
     <p>All animals adopted with us come with spay/neuter,general veterinary exam, vaccinations appropriate to age, flea treatment and basic de-worming.</p>
    <!--<div class="picture"><img src="images/submit.jpeg" alt="aodopt 2 dogs" width="640" height="300"></div>-->
-    
+  
+   <div id="allphotos">
    <ul id="album">
         <!--
         <li class="photo"><img src="images/ourdogs/dog1.png"></li>
@@ -49,6 +50,15 @@
         <li class="photo"><img src="images/ourdogs/dog10.png"></li> 
         -->
     </ul>
+    </div> 
+
+    <div class="backdrop"></div>
+
+    <div class="box">
+        <div class="close">x</div>
+    </div>
+
+
     <!---------------------INFO-------------------->
     <div id="infobox" style="visibility: hidden;">
         <div id="infohead"><h4></h4></div>
@@ -85,7 +95,8 @@ var fileNames = [];
 var photos =[];
 var image;
 var imageList = [];
-var openList="<li class='photo'>";
+var openList= "<li class='photo";
+var openList2 = "'>";
 var closeList="</li>";
 var captionList= ["Flash","Apple","Aspen","Seven","Hannah","Hank","Echo","Lily","Hachi","Brownie"];
 var openCaption = "<caption>";
@@ -94,20 +105,41 @@ var openDescTag = "<div class = 'desc'>";
 var closeDescTag = "</div>";
 var descList = ["Hi, I am a 3 yr Husky. I am a boy!","Hi, I Apple! I am 3 yr and I love apples!","Hi, I am Aspen. I am 5!","Hi, I am Seven, and I am only 7 month old","I am Hannah, I am nine already.","Hi I am Hank. I love playing games and I am 4 yr.","Hi, I am Echo! I am just 4 month old!","Hi, I am Lily. I am 2 yr.","Hi, I am Hachi. I love sushi! ","Hi, I am Brownie. I am 6 yr and my favorite food is carrot!"];
 
+//enlarge image
+
+var openEnlargeA = "<a href = "
+var openEnlargeA2 = ">"
+
+var closeEnlargeA = "</a>"
+
+
+
 for(var i=0;i<10;i++){
     fileNames.push("dog"+(i+1));
     photos.push("<img src='images/ourdogs/" + fileNames[i] + ".png'>");
-    image = openList + photos[i] + openCaption + captionList[i] + openDescTag + descList[i] + closeDescTag + closeCaption + closeList;
+    image = openList + openList2 +
+
+            openEnlargeA + 
+            "'images/ourdogs/" + 
+            fileNames[i] + 
+            ".png' class='lightbox-toggle'" +
+            openEnlargeA2+
+            photos[i] +
+
+            openCaption + 
+            captionList[i] + 
+            closeCaption + 
+            openDescTag + 
+            descList[i] + 
+            closeEnlargeA +
+            closeList;
     imageList.push(image);
 }
 document.getElementById("album").innerHTML=imageList.join('');
 
-
-//INFOBOX
-
-
-
 </script>
+
+<script src="JS/popupbox.js"></script>
 
 
 

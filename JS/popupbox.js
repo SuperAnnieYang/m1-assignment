@@ -1,13 +1,23 @@
-var selectme = document.getElementById("selector");
-selectme.addEventListener("change", function(){
-    if(selectme.value == "dog1"){
-        document.getElementById("dogbox").style.display = 'block';
-    }else{
-        document.getElementById("dogbox").style.display = 'none';
-    }
-    if(selectme.value == "cat1"){
-        document.getElementById("catbox").style.display = 'block';
-    }else{
-        document.getElementById("catbox").style.display = 'none';
-    }
+$(document).ready(function(){
+
+    $('.lightbox-toggle img').click(function(){
+        $('.backdrop').animate({'opacity':'.50'}, 300, 'linear').css('display', 'block');
+        $('.box').fadeIn();
+
+        if ($('.box').contents('img')) {
+            $('.box').contents().remove('img');
+        }
+
+        var img = $(this).clone();
+        $('.box').append(img);
+
+    });
+
+    $('.close, .backdrop').click(function(){
+        $('.backdrop').animate({'opacity':'0'}, 300, 'linear', function(){
+            $('.backdrop').css('display', 'none');
+        });
+        $('.box').fadeOut();
+    });
+
 });
