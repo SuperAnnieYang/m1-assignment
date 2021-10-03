@@ -51,13 +51,11 @@
         -->
     </ul>
     </div> 
-
     <div class="backdrop"></div>
 
     <div class="box">
-        <div class="close">x</div>
+      <div class="close">x</div>
     </div>
-
 
     <!---------------------INFO-------------------->
     <div id="infobox" style="visibility: hidden;">
@@ -65,6 +63,7 @@
         <div id="infotext"><p></p></div>
         <a id="infoclose"></a>
     </div>
+    
     
 </main>
 
@@ -87,8 +86,6 @@
 </footer> 
 </div>  
 
-
-
 <script>
 
 var fileNames = [];
@@ -107,41 +104,36 @@ var descList = ["Hi, I am a 3 yr Husky. I am a boy!","Hi, I Apple! I am 3 yr and
 
 //enlarge image
 
-var openEnlargeA = "<a href = "
+var openEnlargeA = "<a href ='#/' "
 var openEnlargeA2 = ">"
-
 var closeEnlargeA = "</a>"
-
-
+var altvalue = "alt = 'petphotos'>"
 
 for(var i=0;i<10;i++){
     fileNames.push("dog"+(i+1));
-    photos.push("<img src='images/ourdogs/" + fileNames[i] + ".png'>");
+    photos.push("<img src='images/ourdogs/" + fileNames[i] + ".png'");
     image = openList + openList2 +
 
             openEnlargeA + 
-            "'images/ourdogs/" + 
-            fileNames[i] + 
-            ".png' class='lightbox-toggle'" +
-            openEnlargeA2+
-            photos[i] +
+            "class='lightbox-toggle'" +
 
+            openEnlargeA2+
+            photos[i] + altvalue +
+            
             openCaption + 
             captionList[i] + 
             closeCaption + 
             openDescTag + 
             descList[i] + 
             closeEnlargeA +
+
             closeList;
-    imageList.push(image);
+    imageList.push(image);  
 }
 document.getElementById("album").innerHTML=imageList.join('');
-
 </script>
 
 <script src="JS/popupbox.js"></script>
-
-
 
 </body>
 </html>
